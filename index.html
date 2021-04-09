@@ -12,13 +12,24 @@
   
 </head>
 <body>
-  <div class = "container" />
+  <div class = "container"> 
     <div style = 'padding: 15px;'>
       <button type = 'button' class = 'btn' onclick = "getData('')">CIT Majors</button>
       <button type = 'button' class = 'btn' onclick = "getData('')">Business Majors</button>
- 
-  
-  <p> Hello Github </p>
-  
+    </div>
+    
+    <h3> We filter our dataset by major </h3>
+    
+    <div> id = "majorTable"></div>
+  </div>
 </body>
+  
+<script type = "text/x-handlebars-template" id="tableTemplate" >
+  <table class = "table table-striped">
+    <tr><th>Name</th><th>Major</th><th>Midterm</th><th>Final</th></tr>
+      {{#each rows}}
+        <tr>
+          <td>{{name}}
+  
+  
 </html>
