@@ -45,12 +45,12 @@
       
       table_items = data.filter(getItems)
       function getItems(item) {
-        return item.items == selected_Major;
+        return item.major == selected_Major;
       }
       if (request.status == 200) {
         var templateText = document.getElementById('tableTemplate').innerHTML;
         var compiledTemplate = Handlebars.compile(templateText);
-        var compiledHtml = compiledTemplate({rows: table_items })
+        compiledHtml = compiledTemplate({ rows: table_items })
         document.getElementById('majorTable').innerHTML = compiledHtml;
       }
       else {
