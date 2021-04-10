@@ -18,12 +18,12 @@
       <button type = 'button' class = 'btn' onclick = "getData('BUS')">Business Majors</button>
     </div>
     
-    <h3> We filter our dataset by major </h3>
+    <p> We filter our dataset by major </p>
     
     <div> id = "majorTable"></div>
   </div>
 </body>
- <!--> Handlebars Template--> 
+ 
 <script type = "text/x-handlebars-template" id="tableTemplate" >
   <table class = "table table-striped">
     <tr><th>Name</th><th>Major</th><th>Midterm</th><th>Final</th></tr>
@@ -34,7 +34,7 @@
       {{/each}}
   </table>
 </script>
-<!--> Ajax Code Below-->  
+  
 <script>
   function getData(selected_Major) {
     var request = new XMLHttpRequest();
@@ -50,7 +50,7 @@
       if (request.status == 200) {
         var templateText = document.getElementById('tableTemplate').innerHTML;
         var compiledTemplate = Handlebars.compile(templateText);
-        var compiledHtml = compiledTemplate({rows: table_tems });
+        var compiledHtml = compiledTemplate({rows: table_items });
         document.getElementById('majorTable').innerHTML = compiledHtml;
       }
       else {
