@@ -42,5 +42,25 @@
     
     request.onload = function () {
       var data = JSON.parse(request.responseText);
-  
+      
+      table_items = data.filter(getItems)
+      function getItems(item) {
+        return item.items == selected_Major;
+      }
+      if (request.status == 200) {
+        var templateText = document.getElementById('tableTemplate').innerHTML;
+        var compiledTemplate = Handlebars.compile(templateText);
+        var compiledHtml = compiledTemplate({rows: table_tems });
+        document.getElementById('majorTable').innerHTML = compiledHtml;
+      }
+      else {
+        document.querySelector('#majorTable').innerHTML = "Sorry, there was an error please try again."    
+      }  
+    }
+    
+    request.send(null);
+  }
+</script>
+    
+    
 </html>
