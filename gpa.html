@@ -14,8 +14,7 @@
     table tr:nth-child(odd) {background-color:#f1f1f1;}
     table tr:nth-child(even) {background-color:#ffffff;}
     
-    h2 {color:white}
-    p {color:white}
+    h2, p {color:white}
     input {color:black}
   </style>
 </head>
@@ -35,8 +34,9 @@
       </ul>
     </div> <!-- navbar ends here -->
       
+   
+    <div ng-controller = "allControl"> 
     <h2>Advisees</h2>
-    <div ng-controller = "allControl">
       <p><input type = 'text' ng-model = "search_text"> Enter Search Text</p>
       <table class = "table table-bordered ">
         <tr>
