@@ -32,17 +32,18 @@
         <li><a style="color: #ffffff" href="index.html">All Advisees</a></li>
         <li class = "active"><a style="color: #000000" href="gpa.html">Grade Point Averages</a></li>
       </ul>
-    </div> <!-- navbar ends here -->
+    </div> 
+    </nav>  <!-- navbar ends here -->
       
     <div ng-controller = "allControl">
       
-      
+      <h2>Advisees</h2
       <p><input type = 'text' ng-model = "search_text"> Enter Search Text</p>
       <table class = "table table-bordered ">
         <tr>
           <th>sid</th> <th>Last Name</th> <th>First Name</th> <th>GPA</th>
         </tr>
-        <p><h2>Advisees</h2></p>
+        
         <tr ng-repeat = "last_name in students | filter:search_text"> <!-- create the filter -->
           <td>{{last_name.id}}</td>
           <td>{{last_name.last_name}}</td>
