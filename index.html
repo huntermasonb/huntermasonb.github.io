@@ -32,7 +32,7 @@
       
     <div ng-controller = "allControl">
     <br>
-    <h2>Advisees</h2>
+<h2>Advisees</h2>
       <p><input type = 'text' ng-model = "search_text"> Enter Search Text</p>
       <table class = "table table-bordered table-striped">
         <tr>
@@ -58,6 +58,12 @@
         $scope.students = response.data; //populate the table
       });
     });
-  </script>           
+  </script>
+    
+  <style>
+  .navbar-default {
+    background-color = #5e03fc;
+  }
+  </style>  
 </body> 
 </html>
