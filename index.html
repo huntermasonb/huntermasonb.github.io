@@ -9,7 +9,7 @@
   
   <title> Program 6 </title>
   <style>
-    .navbar {
+    .navbar-default {
       background-color = #5e03fc;
     }
   </style>
@@ -19,7 +19,7 @@
   
   <div class = "container">
     
-    <nav class = "navbar navbar-dark" >
+    <nav class = "navbar navbar-dark navbar-default" >
     <div class = "navbar-header">
       <a class = "navbar-brand" href="#">My Website</a>
     </div>
@@ -31,6 +31,7 @@
     </div> <!-- navbar ends here -->
       
     <div ng-controller = "allControl">
+    <br>
     <h2>Advisees</h2>
       <p><input type = 'text' ng-model = "search_text"> Enter Search Text</p>
       <table class = "table table-bordered table-striped">
